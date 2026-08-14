@@ -1,0 +1,1020 @@
+<html style="margin:0;padding:0;">
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+<script>
+(function(){
+  var s = document.createElement('style');
+  s.textContent = ':root{--bg:#faf9f4;--card:#ffffff;--text:#0f172a;--muted:#64748b;--accent:#6366f1;--accent-soft:rgba(99,102,241,.14);--accent2:#d97706;--accent2-soft:rgba(217,119,6,.14);--border:rgba(15,23,42,.08)}'
+  +'.reveal{opacity:0;transform:translateY(20px);animation:fadeUp .6s ease forwards}.reveal:nth-child(2){animation-delay:.08s}.reveal:nth-child(3){animation-delay:.16s}.reveal:nth-child(4){animation-delay:.24s}.reveal:nth-child(5){animation-delay:.32s}.reveal:nth-child(6){animation-delay:.4s}@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}'
+  +'.card-hover{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.card-hover:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(99,102,241,.12);border-color:var(--accent)}'
+  +'.tbl-row{transition:background .15s ease}.tbl-row:hover{background:rgba(99,102,241,.05)}'
+  +'.tab-btn{transition:all .2s ease;border:1px solid var(--border);background:var(--card);color:var(--muted)}.tab-btn:hover{border-color:var(--accent);color:var(--accent)}.tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 4px 14px rgba(99,102,241,.3)}'
+  +'.chapter-section{display:none}.chapter-section.active{display:block;animation:fadeUp .5s ease}'
+  +'.accordion-item{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;background:var(--card);overflow:hidden}.accordion-head{cursor:pointer;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--text)}.accordion-head:hover{background:var(--accent-soft)}.accordion-body{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 20px}.accordion-body.open{max-height:3000px;padding:0 20px 20px}.chev{transition:transform .3s ease}.chev.open{transform:rotate(180deg)}'
+  +'::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--accent-soft);border-radius:10px}::-webkit-scrollbar-thumb:hover{background:var(--accent)}';
+  document.head.appendChild(s);
+})();
+</script>
+<div style="background-color:transparent;box-sizing:border-box;">
+  <div style="color:var(--text);font-family:'Fredoka',sans-serif;background:var(--bg)">
+    <div class="max-w-6xl mx-auto px-5 py-10">
+
+      <!-- ===================== HERO ===================== -->
+      <div class="reveal mb-10">
+        <div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:18px;">
+          <div style="width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 6px 20px rgba(99,102,241,.35)">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <p style="font-family:monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent)">Undergraduate Thesis · BSBA · 2025</p>
+            <h1 class="text-3xl md:text-4xl font-bold leading-tight mt-2" style="color:var(--text);letter-spacing:-0.02em">The Influence of Creativity, Entrepreneurial Education, and Entrepreneurial Mindset on Entrepreneurial Intention</h1>
+            <p class="text-lg mt-2 font-semibold" style="color:var(--accent2)">The Mediating Role of Entrepreneurial Self-Efficacy</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span style="padding:4px 12px;border-radius:20px;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:600">Social Cognitive Theory</span>
+          <span style="padding:4px 12px;border-radius:20px;background:var(--accent2-soft);color:var(--accent2);font-size:12px;font-weight:600">Descriptive-Correlational</span>
+          <span style="padding:4px 12px;border-radius:20px;background:rgba(13,148,136,.12);color:#0d9488;font-size:12px;font-weight:600">Mediation Analysis</span>
+          <span style="padding:4px 12px;border-radius:20px;background:rgba(220,38,38,.1);color:#dc2626;font-size:12px;font-weight:600">N = 246</span>
+        </div>
+        <div style="color:var(--muted);font-size:14px;line-height:1.6">
+          <strong style="color:var(--text)">Researchers:</strong> Madriaga, Gabrielle Angela G. · Urian, Cathrine Angel D.C. · Parole, Nhil Jhanzen C. · Adriano, John Mark S. · Camua, Rovi Ann S. · Narcida, Jeraldine P.<br>
+          <strong style="color:var(--text)">Adviser:</strong> Dr. Cecilia De Guzman, LPT, ChBA &nbsp;|&nbsp; <strong style="color:var(--text)">Institution:</strong> La Consolacion University Philippines
+        </div>
+      </div>
+
+      <!-- ===================== METRIC CARDS ===================== -->
+      <div class="reveal flex flex-wrap gap-4 mb-10">
+        <div class="card-hover rounded-2xl p-5" style="flex:1 1 180px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium">Respondents</div>
+          </div>
+          <div class="text-3xl font-bold" style="color:var(--text)">246</div>
+          <div class="text-xs mt-1 font-medium" style="color:var(--muted)">Slovin's Formula · 5% MoE</div>
+        </div>
+        <div class="card-hover rounded-2xl p-5" style="flex:1 1 180px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--accent2-soft);display:flex;align-items:center;justify-content:center;color:var(--accent2)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium">Variables</div>
+          </div>
+          <div class="text-3xl font-bold" style="color:var(--text)">5</div>
+          <div class="text-xs mt-1 font-medium" style="color:var(--muted)">3 IV · 1 Mediator · 1 DV</div>
+        </div>
+        <div class="card-hover rounded-2xl p-5" style="flex:1 1 180px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(13,148,136,.14);display:flex;align-items:center;justify-content:center;color:#0d9488">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium">Avg. Level</div>
+          </div>
+          <div class="text-3xl font-bold" style="color:var(--text)">3.87</div>
+          <div class="text-xs mt-1 font-medium" style="color:#059669">High on all constructs</div>
+        </div>
+        <div class="card-hover rounded-2xl p-5" style="flex:1 1 180px;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(220,38,38,.12);display:flex;align-items:center;justify-content:center;color:#dc2626">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div style="color:var(--muted)" class="text-xs uppercase tracking-wide font-medium">Hypotheses</div>
+          </div>
+          <div class="text-3xl font-bold" style="color:var(--text)">3/3</div>
+          <div class="text-xs mt-1 font-medium" style="color:#059669">Mediation confirmed · p < .05</div>
+        </div>
+      </div>
+
+      <!-- ===================== ABSTRACT ===================== -->
+      <div class="reveal rounded-2xl p-7 mb-10" style="background:linear-gradient(135deg,var(--accent-soft),var(--accent2-soft));border:1px solid var(--border)">
+        <h2 class="text-xl font-bold mb-3" style="color:var(--text)">Abstract</h2>
+        <p style="color:var(--text);line-height:1.75;font-size:15px">
+          This study examines the influence of creativity, entrepreneurial education, and entrepreneurial mindset on entrepreneurial intention among 245–246 students in the College of Business Entrepreneurship and Accountancy (CBEA) at La Consolacion University Philippines. Grounded in <strong>Albert Bandura's Social Cognitive Theory (1986)</strong>, the research explores how the three independent variables influence entrepreneurial self-efficacy (mediator) and entrepreneurial intention (outcome). Using a <strong>descriptive correlational research design</strong>, data were collected through a standardized 28-item questionnaire adapted from Jiatong et al. (2021), with Cronbach's α ranging from 0.908 to 0.941. Statistical tools included weighted mean and mediated linear regression.
+        </p>
+        <p style="color:var(--text);line-height:1.75;font-size:15px;margin-top:10px">
+          Findings confirm that creativity, entrepreneurial education, and entrepreneurial mindset are all at a <strong>High level</strong>, and significantly influence both entrepreneurial self-efficacy and entrepreneurial intention. Entrepreneurial self-efficacy <strong>fully mediates</strong> the creativity → intention link, and <strong>partially mediates</strong> the education → intention and mindset → intention links. Results highlight that building confidence in entrepreneurial capability is a key mechanism that transforms personal qualities and learning into stronger intention to pursue entrepreneurship.
+        </p>
+      </div>
+
+      <!-- ===================== CHAPTER TABS ===================== -->
+      <div class="reveal mb-8">
+        <div class="flex flex-wrap gap-2" id="chapTabs">
+          <button class="tab-btn active px-4 py-2.5 rounded-xl font-semibold text-sm" data-ch="1">Chapter 1 · Problem</button>
+          <button class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm" data-ch="2">Chapter 2 · Methodology</button>
+          <button class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm" data-ch="3">Chapter 3 · Results</button>
+          <button class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm" data-ch="4">Chapter 4 · Conclusions</button>
+          <button class="tab-btn px-4 py-2.5 rounded-xl font-semibold text-sm" data-ch="5">References</button>
+        </div>
+      </div>
+
+      <!-- ===================== CHAPTER 1 ===================== -->
+      <div class="chapter-section active" id="ch1">
+
+        <div class="rounded-2xl p-7 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <h2 class="text-2xl font-bold mb-4" style="color:var(--accent)">Chapter 1 · The Problem and Its Background</h2>
+
+          <h3 class="text-lg font-bold mb-3 mt-5" style="color:var(--text)">Introduction</h3>
+          <p style="line-height:1.75;color:var(--text)">
+            The business world is rapidly evolving, making creativity and strategic thinking vital to entrepreneurial success. All businesses begin with an idea, but not all ideas become viable business plans. <strong>Creativity</strong> enables entrepreneurs to conceive new products, services, and concepts (Brem & Puente-Díaz, 2020), while <strong>strategic thinking</strong> converts those ideas into profitable, structured business models that deliver customer value, manage resources, and compete effectively (Bashir et al., 2020). Recent research confirms that combining creativity and strategic thinking significantly boosts innovative output and adaptive capacity in shifting markets (Barkova, 2025), supporting aspiring entrepreneurs in both idea generation and problem solving amid evolving demand and competition (Remilekun et al., 2023).
+          </p>
+          <p style="line-height:1.75;color:var(--text);margin-top:10px">
+            Cavallo et al. (2023) add that strategic thinking improves resource allocation, decision speed, and technology adoption — raising long-run profitability. Creativity paired with strategic agility is increasingly viewed as a source of sustainable competitive advantage in fast-changing industries (Phuong et al., 2023). This study therefore investigates how creativity, entrepreneurial education, and entrepreneurial mindset shape students' intention to enter entrepreneurship, with entrepreneurial self-efficacy as the explanatory psychological mechanism.
+          </p>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Theoretical Framework</h3>
+          <div style="border-left:4px solid var(--accent);background:var(--accent-soft);padding:14px 18px;border-radius:0 10px 10px 0">
+            <p class="font-semibold" style="color:var(--accent)">Albert Bandura · Social Cognitive Theory (1986)</p>
+            <p style="line-height:1.7;color:var(--text);margin-top:6px">
+              Explains how individuals develop ability beliefs and translate them into goal-directed action. Central to the theory is <strong>self-efficacy</strong> — the conviction that one can successfully execute the behaviors required to produce given attainments. Personal factors (creativity, mindset), environmental factors (entrepreneurial education), and behavioral factors interact reciprocally. In this study, the theory frames how creativity, education, and mindset shape entrepreneurial self-efficacy, which in turn drives entrepreneurial intention.
+            </p>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Conceptual Framework</h3>
+          <div id="cfChart" style="height:340px;width:100%"></div>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Statement of the Problem</h3>
+          <p style="color:var(--muted);font-size:14px;margin-bottom:10px">The study answers the following questions:</p>
+          <ol style="line-height:1.9;color:var(--text);padding-left:22px">
+            <li>What is the level of entrepreneurial factor in terms of: <strong>1.1 Creativity</strong> · <strong>1.2 Entrepreneurial Education</strong> · <strong>1.3 Entrepreneurial Mindset</strong>?</li>
+            <li>What is the level of <strong>Entrepreneurial Self-Efficacy</strong> and <strong>Entrepreneurial Intention</strong> among the respondents?</li>
+            <li>Do Creativity, Entrepreneurial Education, Entrepreneurial Mindset significantly influence Entrepreneurial Intention and Entrepreneurial Self-Efficacy?</li>
+            <li>Does Entrepreneurial Self-Efficacy significantly influence Entrepreneurial Intention?</li>
+            <li>Does Entrepreneurial Self-Efficacy <em>mediate</em> the relationship between Creativity / Entrepreneurial Education / Entrepreneurial Mindset and Entrepreneurial Intention?</li>
+            <li>What strategy can be implemented based on the results of the study?</li>
+          </ol>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Hypotheses of the Study</h3>
+          <ul style="line-height:1.9;color:var(--text);padding-left:22px">
+            <li><strong>H₀₁:</strong> Creativity does not have a significant influence on entrepreneurial intention.</li>
+            <li><strong>H₀₂:</strong> Entrepreneurial education does not have a significant influence on entrepreneurial intention.</li>
+            <li><strong>H₀₃:</strong> Entrepreneurial mindset does not have a significant influence on entrepreneurial intention.</li>
+          </ul>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Definition of Terms</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">Term</th>
+                  <th class="text-left py-3 font-semibold">Conceptual Definition</th>
+                  <th class="text-left py-3 font-semibold">Operational Definition</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">Creativity</td><td class="py-3">Production of original and practical ideas that contribute to innovation (Zhou & George, 2021).</td><td class="py-3">Self-reported quantity and originality of ideas; measured via 6 Likert items.</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">Strategic Thinking</td><td class="py-3">Cognitive process of long-term planning, anticipating challenges, integrating information for competitive advantage (Liedtka, 2020).</td><td class="py-3">Frequency and quality of scenario planning, competitor analysis, and goal alignment.</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">Business Model</td><td class="py-3">How an organization creates, delivers, and captures value via partners, activities, and resources (Spieth et al., 2020).</td><td class="py-3">Value proposition, customer segments, revenue streams, key partnerships.</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">Idea Generation</td><td class="py-3">Process of producing creative solutions to organizational problems or new opportunities.</td><td class="py-3">Quantity and diversity of ideas from brainstorming and innovation activities.</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:var(--accent)">Entrepreneurial Mindset</td><td class="py-3">Attitudes and skills that help recognize opportunities, take calculated risks, innovate under uncertainty (Renko et al., 2020).</td><td class="py-3">Scores on the Entrepreneurial Mindset Profile covering risk tolerance, proactiveness, opportunity recognition, resilience.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Scope and Delimitation</h3>
+          <p style="line-height:1.75;color:var(--text)">
+            The study focuses on how creativity and strategic thinking relate to business model development, and on the relationships among creative problem solving, idea generation, and the formulation of structured business models. <strong>Participants are CBEA students of La Consolacion University Philippines</strong> (BSA, BSBA MM, BSBA FM, BSBA HRDM) who have received entrepreneurial education, selected via purposive sampling. The population of 635 yielded a sample of 246 via Slovin's formula (5% margin of error). The study <strong>does not cover</strong> practicing entrepreneurs outside the university, nor long-term venture performance or profitability — only the developmental phase of business models and entrepreneurial intention.
+          </p>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Significance of the Study</h3>
+          <ul style="line-height:1.85;color:var(--text);padding-left:22px">
+            <li><strong style="color:var(--accent)">Aspiring Entrepreneurs:</strong> Provides evidence on why creativity matters and how to actively develop it for competitive, sustainable ventures.</li>
+            <li><strong style="color:var(--accent)">Businesses:</strong> Serves as reference on innovation culture and strategic agility; prioritizing both improves competitiveness and adaptability.</li>
+            <li><strong style="color:var(--accent)">Future Researchers:</strong> Offers baseline data, conceptual grounding, and methodological reference for related entrepreneurship inquiries.</li>
+          </ul>
+        </div>
+
+        <!-- RRL ACCORDIONS -->
+        <div class="rounded-2xl p-7 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <h3 class="text-xl font-bold mb-5" style="color:var(--accent2)">Review of Related Literature</h3>
+
+          <div class="accordion-item">
+            <div class="accordion-head" data-acc="rrl1"><span>Creativity</span><span class="chev" style="color:var(--accent)">▼</span></div>
+            <div class="accordion-body" id="rrl1">
+              <p style="line-height:1.75;color:var(--text);margin-top:14px">
+                Creativity is widely recognized as a central cognitive and personality trait shaping entrepreneurial intention. Within social cognition, creativity raises perceived feasibility and desirability, influencing both intention formation and actual action (Altınay et al., 2021; Entrialgo & Iglesias, 2020). It is not limited to the arts, but is critical to idea generation, innovation, and problem solving that represents venture opportunity (Aisdl, 2020). Creativity also interacts with entrepreneurial personality, implying that deliberate cultivation can raise entrepreneurial engagement (Altınay et al., 2021).
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                In the Theory of Planned Behavior, creativity connects attitudes, subjective norms, and perceived behavioral control to intention: more creative individuals better envision opportunities and anticipate risks (Shi et al., 2020). Entrepreneurship programs that embed creativity training consistently outperform those that do not (Wang et al., 2021; Rachmadana & Diarra, 2024). <strong>Entrepreneurial self-efficacy mediates the creativity → intention link</strong>: higher creativity builds stronger capability beliefs, which then raise intention (Ferreira-Neto et al., 2023; Li et al., 2023). Creativity also fuels intrinsic motivation and entrepreneurial passion, sustaining long-term intentions.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Zhou & George (2021) developed protocols measuring idea quantity and originality in brainstorming. Zhao et al. (2022) found creativity predicts firm growth via business model innovation, especially among experienced founders. Cacciatore (2023) showed founders with artistic passions produced more unique business model configurations. Rae (2022) identified conversational leadership and liminal learning spaces as key organizational drivers of creativity in entrepreneurship education.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-head" data-acc="rrl2"><span>Entrepreneurial Education</span><span class="chev" style="color:var(--accent)">▼</span></div>
+            <div class="accordion-body" id="rrl2">
+              <p style="line-height:1.75;color:var(--text);margin-top:14px">
+                Novelli & Spina (2024) position entrepreneurial education as pivotal in converting ideas into workable business models by equipping learners with knowledge, creativity, and strategic thinking. Li, Li & Lu (2022) show that evidence-based, scientific decision-making training improves idea testing, risk reduction, and smarter choices — education is not merely theoretical but trains strategic reasoning under pressure. Han, Zhou & Lu (2022) confirm education pushes students to design business models that thrive in competitive markets, with business model innovation mediating the creativity → growth link.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Kurek et al. (2023) identify strategic thinking as a key outcome: programs teach opportunity identification, risk evaluation, and adaptive planning. You (2022) highlights <strong>design thinking</strong> — brainstorming, prototyping, testing — as the hands-on process bridging raw ideas and sustainable strategies, a view echoed by the Journal of Business Economics and Management (2024). Pérez-Macías et al. (2023) add that flipped classrooms, brainstorming, and debates raise risk-taking propensity and venturing behavior.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Frontiers in Psychology (2022) highlights entrepreneurial passion and curiosity as drivers of business model innovation, while Pham et al. (2023) link entrepreneurship knowledge to digital/e-commerce venturing intention, especially with technology infusion. Tahan (2025) finds education shapes opportunity recognition and resilience despite fear of failure via psychological capital (resilience, self-confidence). Jiatong et al. (2021), Fang Li et al. (2022), Azra Bano et al. (2022), and Xiang Wang et al. (2022) collectively confirm: entrepreneurial education, creativity, and mindset together significantly raise intention, with self-efficacy as a central mediator.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-head" data-acc="rrl3"><span>Entrepreneurial Mindset</span><span class="chev" style="color:var(--accent)">▼</span></div>
+            <div class="accordion-body" id="rrl3">
+              <p style="line-height:1.75;color:var(--text);margin-top:14px">
+                Degefu et al. (2024) review multiple tools for measuring mindset attitudes, intentions, and skills, concluding it is a cross-sectoral success factor. Ashraf et al. (2024) find mindset — more than alertness — mediates the education → intention link, making it critical for economic sustainability. Shabbir et al. (2025) add that mindset is built on skills <em>and</em> positive attitudes, which together drive intention.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Elbaz et al. (2025) confirm both education and mindset raise self-efficacy, which then strengthens intention — with creativity and role models as moderators. Oluwaseun et al. (2020) show a strong positive mindset → SME success link (unmoderated by government policy). Maqbool et al. (2021) in Pakistan/Germany find mindset improves opportunity recognition, skill building, and attitudes. Wardana et al. (2021) in Indonesia: education does not affect mindset directly — it works <em>through</em> student attitudes, making positive affect the key bridge. Rafaiti (2022) distinguishes an <em>elaborating mindset</em> (why / analytic) from an <em>implementing mindset</em> (how / action), noting students tend toward the former — translating knowledge into action remains a pedagogical challenge.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Ghazali et al. (2022) show Big Five traits shape self-efficacy and attitudes, which then drive intention (with passion as moderator). Handayati et al. (2020) link an entrepreneurial marketing mindset — creativity, adaptability, proactivity — to digital startup innovativeness and competitiveness. Jiatong et al. (2021) and Hadyati et al. (2020) both confirm entrepreneurship education improves mindset, self-efficacy, and intention, especially when paired with real-world tasks.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-head" data-acc="rrl4"><span>Entrepreneurial Self-Efficacy</span><span class="chev" style="color:var(--accent)">▼</span></div>
+            <div class="accordion-body" id="rrl4">
+              <p style="line-height:1.75;color:var(--text);margin-top:14px">
+                Deliana (2023) defines self-efficacy as belief in one's ability to succeed in specific tasks; it determines learning approach, complexity acceptance, persistence, and eventual performance. Swaramarinda et al. (2021) position it as foundational to starting and managing ventures of any size. Jiatong et al. (2021) add that self-efficacy sharpens creative thinking, clarifies cognition, and informs new-firm decisions.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Relente & Capistrano (2024) underscore its relevance to young Filipinos, whose readiness to seize opportunities depends on their innovation self-efficacy. Sarman et al. (2021) link motivation and ESE to venture creation; empathy grows when entrepreneurs trust their capabilities and take calculated risks. Wiyanto et al. (2023) and Hermio (2021) both identify ESE as a direct driver of intention formation and practical venture planning. Wardana et al. (2024) find opportunity-belief strongly predicts aspirations.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Niu et al. (2022) and Saoula et al. (2023) place ESE at the center of intention models, predicting behavioral decisions, perseverance, and learning interest. Maitlo et al. (2020) show ESE enables resource mobilization via effectuation principles (precommitments, affordable loss), supporting venture growth in developing economies. McGee & Terry (2024) find during COVID-19, ESE alone did not buffer performance shocks — but paired with strategic posture it became decisive, highlighting its contingent value in crises.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-head" data-acc="rrl5"><span>Entrepreneurial Intention</span><span class="chev" style="color:var(--accent)">▼</span></div>
+            <div class="accordion-body" id="rrl5">
+              <p style="line-height:1.75;color:var(--text);margin-top:14px">
+                Cunha et al. (2022) show intention mediates the creativity → social innovation link: creative people with strong entrepreneurial perspective pursue socially useful ventures at much higher rates. Jiang et al. (2022) emphasize experiential learning (hands-on tasks, mentoring) and institutional support as critical environmental drivers. Bell & Cui (2022) document the field's shift from knowledge-only to experiential/attitude-focused entrepreneurship education.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Anjum et al. (2020) find creativity + university resources + mentorship powerfully predict student venturing. Do & Nguyen (2023) identify entrepreneurial capacity as the key mediator between education and intention, arguing for skill-based over theory-only curricula. Umar et al. (2024) extend this to faculty: perceived entrepreneurial thinking + supportive environment predict research commercialization and innovation engagement.
+              </p>
+              <p style="line-height:1.75;color:var(--text);margin-top:10px">
+                Huang (2023) shows innovation-focused STEM education raises intention via self-efficacy more than via personal work values. Husnah et al. (2024) link digital marketing education to innovation skills → confidence → intention. Taghizadeh et al. (2024) move to the firm level: consistent innovation-seeking intention improves both financial and operational performance. Paiva et al. (2024), in a 686-student cross-cultural study, find innovation drives intention everywhere but its strength varies culturally; environmental knowledge rarely does. Lee et al. (2022) add knowledge exploration/exploitation behaviors as intention antecedents alongside innovativeness, self-efficacy, and internal locus of control. Indhirapratha & Thavaraj (2024) provide a recent global review confirming creativity, education, and attitudes as the most replicated intention predictors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== CHAPTER 2 ===================== -->
+      <div class="chapter-section" id="ch2">
+        <div class="rounded-2xl p-7 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <h2 class="text-2xl font-bold mb-5" style="color:var(--accent)">Chapter 2 · Methodology of the Study</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div class="card-hover p-5 rounded-xl" style="border:1px solid var(--border);background:var(--accent-soft)">
+              <p class="text-xs uppercase tracking-wide font-semibold mb-2" style="color:var(--accent)">Research Design</p>
+              <p class="font-bold text-lg mb-1" style="color:var(--text)">Descriptive · Correlational</p>
+              <p style="color:var(--text);line-height:1.6;font-size:14px">Systematically analyzes relationships among creativity, entrepreneurial education, mindset, self-efficacy, and intention. Descriptively captures perceptions, practices, and experiences; correlational quantifies the strength and direction of associations (Anderson & Hjertstrand, 2021).</p>
+            </div>
+            <div class="card-hover p-5 rounded-xl" style="border:1px solid var(--border);background:var(--accent2-soft)">
+              <p class="text-xs uppercase tracking-wide font-semibold mb-2" style="color:var(--accent2)">Sampling Technique</p>
+              <p class="font-bold text-lg mb-1" style="color:var(--text)">Purposive · Slovin's Formula</p>
+              <p style="color:var(--text);line-height:1.6;font-size:14px">Students matched to inclusion criteria (CBEA enrollees with entrepreneurial education exposure). Population N = 635; sample n = 246 at 5% margin of error: <em>n = N / (1 + Ne²)</em>. Covers BSA, BSBA MM, BSBA FM, BSBA HRDM.</p>
+            </div>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 mt-5" style="color:var(--text)">Respondents of the Study — Distribution by Program</h3>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">Program</th>
+                  <th class="text-right py-3 font-semibold">Population</th>
+                  <th class="text-right py-3 font-semibold">Sample Size</th>
+                  <th class="text-right py-3 font-semibold">Percentage</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-medium">BSA (Accountancy)</td><td class="py-3 text-right">196</td><td class="py-3 text-right font-semibold">76</td><td class="py-3 text-right">31%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-medium">BSBA MM (Marketing)</td><td class="py-3 text-right">165</td><td class="py-3 text-right font-semibold">64</td><td class="py-3 text-right">26%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-medium">BSBA FM (Financial Mgmt)</td><td class="py-3 text-right">255</td><td class="py-3 text-right font-semibold">99</td><td class="py-3 text-right">41%</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-medium">BSBA HRDM (Human Resource)</td><td class="py-3 text-right">19</td><td class="py-3 text-right font-semibold">7</td><td class="py-3 text-right">2.9%</td></tr>
+                <tr style="border-top:2px solid var(--accent);font-weight:700;color:var(--accent)"><td class="py-3">GRAND TOTAL</td><td class="py-3 text-right">635</td><td class="py-3 text-right">246</td><td class="py-3 text-right">100%</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div id="progChart" style="height:320px;width:100%"></div>
+            <div id="yearChart" style="height:320px;width:100%"></div>
+          </div>
+
+          <h3 class="text-lg font-bold mb-3 mt-5" style="color:var(--text)">Instrument of the Study</h3>
+          <p style="line-height:1.7;color:var(--text)">
+            Standardized questionnaire adapted from <strong>Jiatong et al. (2021)</strong> with the identical title. Composed of <strong>5 variables · 28 items</strong> on a 5-point Likert scale:
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-3 my-4">
+            <div class="p-3 rounded-lg text-center" style="background:var(--accent-soft);border:1px solid var(--border)"><div class="font-bold text-lg" style="color:var(--accent)">6 items</div><div class="text-xs font-semibold" style="color:var(--text)">Creativity</div></div>
+            <div class="p-3 rounded-lg text-center" style="background:var(--accent-soft);border:1px solid var(--border)"><div class="font-bold text-lg" style="color:var(--accent)">6 items</div><div class="text-xs font-semibold" style="color:var(--text)">Entrepreneurial Education</div></div>
+            <div class="p-3 rounded-lg text-center" style="background:var(--accent-soft);border:1px solid var(--border)"><div class="font-bold text-lg" style="color:var(--accent)">6 items</div><div class="text-xs font-semibold" style="color:var(--text)">Entrepreneurial Mindset</div></div>
+            <div class="p-3 rounded-lg text-center" style="background:var(--accent2-soft);border:1px solid var(--border)"><div class="font-bold text-lg" style="color:var(--accent2)">4 items</div><div class="text-xs font-semibold" style="color:var(--text)">Entrepreneurial Self-Efficacy</div></div>
+            <div class="p-3 rounded-lg text-center" style="background:rgba(13,148,136,.12);border:1px solid var(--border)"><div class="font-bold text-lg" style="color:#0d9488">6 items</div><div class="text-xs font-semibold" style="color:var(--text)">Entrepreneurial Intention</div></div>
+          </div>
+          <p style="line-height:1.7;color:var(--text)">
+            Reliability tested via Cronbach's alpha: <strong>α = 0.908 – 0.941</strong> (excellent internal consistency). Content and construct validity established through conceptual and confirmatory analysis.
+          </p>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Likert Scale Interpretation</h3>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">Scale Range</th>
+                  <th class="text-left py-3 font-semibold">Verbal Interpretation</th>
+                  <th class="text-left py-3 font-semibold">Description</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#059669">4.50 – 5.00</td><td class="py-3">Strongly Agree</td><td class="py-3">Strong evidence the indicator is observable.</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#10b981">3.50 – 4.49</td><td class="py-3">Agree</td><td class="py-3">Decent evidence the indicator is observable.</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#d97706">2.50 – 3.49</td><td class="py-3">Neutral</td><td class="py-3">Moderate evidence the indicator is observable.</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#f59e0b">1.50 – 2.49</td><td class="py-3">Disagree</td><td class="py-3">Insufficient evidence to strongly support observability.</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:#dc2626">1.00 – 1.49</td><td class="py-3">Strongly Disagree</td><td class="py-3">Insufficient evidence to confirm observability.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-xs" style="color:var(--muted)">Note: Results chapter uses an alternative 5-band interpretation: 4.21–5.00 Very High · 3.41–4.20 High · 2.61–3.40 Moderate · 1.81–2.60 Low · 1.00–1.80 Very Low.</p>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Data Gathering Procedure</h3>
+          <ol style="line-height:1.9;color:var(--text);padding-left:22px">
+            <li>Request approval from the CBEA Office to administer the survey instrument.</li>
+            <li>Upon approval, format the questionnaire in <strong>Google Forms</strong>.</li>
+            <li>Distribute the survey link to respondents via Messenger.</li>
+            <li>Allow sufficient response time; monitor participation to ensure completeness.</li>
+            <li>Screen returned responses to verify every item was answered.</li>
+            <li>Tally, tabulate, compute, analyze, and interpret the final dataset using SPSS.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Statistical Treatment</h3>
+          <ul style="line-height:1.9;color:var(--text);padding-left:22px">
+            <li><strong style="color:var(--accent)">Frequency & Percentage:</strong> Demographic profile distribution.</li>
+            <li><strong style="color:var(--accent)">Weighted Mean:</strong> Level of agreement on each variable/indicator. <em>W = ∑(XᵢWᵢ) / n</em>.</li>
+            <li><strong style="color:var(--accent)">Linear / Mediated Regression:</strong> Direct, indirect, and total effects of IVs on DV via the mediator. <em>Y = a + bX</em>. Significance evaluated at α = .05 with 95% bootstrapped CIs.</li>
+            <li><strong style="color:var(--accent)">Correlation Guidelines:</strong> ≥.90 Very High · .70–.89 High · .40–.69 Moderate · .20–.39 Low · ≤.19 Very Low.</li>
+          </ul>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Ethical Considerations</h3>
+          <p style="line-height:1.75;color:var(--text)">
+            Strictly adheres to the <strong>Philippine Data Privacy Act of 2012 (RA 10173)</strong>. All responses are anonymized, aggregated, and stored securely. Participants may refuse any item or withdraw at any time without penalty. The study's purpose, procedures, risks, and benefits are fully communicated. Findings are reported truthfully and impartially, with no manipulation or distortion of data, and all conflicts of interest are declared.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===================== CHAPTER 3 ===================== -->
+      <div class="chapter-section" id="ch3">
+        <div class="rounded-2xl p-7 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <h2 class="text-2xl font-bold mb-5" style="color:var(--accent)">Chapter 3 · Results and Discussion</h2>
+
+          <!-- DEMO -->
+          <h3 class="text-lg font-bold mb-3" style="color:var(--text)">Demographic Profiles of Respondents (N = 246)</h3>
+          <div class="overflow-x-auto mb-5">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">Profile</th>
+                  <th class="text-left py-3 font-semibold">Category</th>
+                  <th class="text-right py-3 font-semibold">Frequency</th>
+                  <th class="text-right py-3 font-semibold">Percentage</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-medium" rowspan="2">Gender</td><td class="py-3">Male</td><td class="py-3 text-right">64</td><td class="py-3 text-right">26.0%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3"><strong>Female</strong></td><td class="py-3 text-right"><strong>182</strong></td><td class="py-3 text-right"><strong>74.0%</strong></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-medium" rowspan="4">Year Level</td><td class="py-3">1st Year</td><td class="py-3 text-right">50</td><td class="py-3 text-right">20.3%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">2nd Year</td><td class="py-3 text-right">48</td><td class="py-3 text-right">19.5%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">3rd Year</td><td class="py-3 text-right">60</td><td class="py-3 text-right">24.4%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3"><strong>4th Year</strong></td><td class="py-3 text-right"><strong>88</strong></td><td class="py-3 text-right"><strong>35.8%</strong></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-medium" rowspan="4">Program</td><td class="py-3">BSA</td><td class="py-3 text-right">77</td><td class="py-3 text-right">31.3%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">BSBA MM</td><td class="py-3 text-right">64</td><td class="py-3 text-right">26.0%</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3"><strong>BSBA FM</strong></td><td class="py-3 text-right"><strong>98</strong></td><td class="py-3 text-right"><strong>39.8%</strong></td></tr>
+                <tr class="tbl-row"><td class="py-3">BSBA HRDM</td><td class="py-3 text-right">7</td><td class="py-3 text-right">2.8%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px">
+            <strong>Interpretation:</strong> Predominantly female (74%), mostly seniors (35.8%) with greater academic exposure, and concentrated in BSBA FM (39.8%), BSA (31.3%), and BSBA MM (26.0%). These demographics may slightly tilt overall responses toward upper-year, finance-oriented views. Consistent with D'Armas Regnault et al. (2024) and Ramadani et al. (2022), who show age, gender, and educational ecosystem shape intention patterns.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+            <div id="genderChart" style="height:300px;width:100%"></div>
+            <div id="demoYearChart" style="height:300px;width:100%"></div>
+          </div>
+
+          <!-- COMPOSITE WM CHART -->
+          <h3 class="text-lg font-bold mb-3 mt-8" style="color:var(--text)">Overall Level of All Constructs (Composite Weighted Means)</h3>
+          <div id="compChart" style="height:340px;width:100%"></div>
+          <p class="text-sm mt-2 mb-6" style="color:var(--muted)">Interpretation: 4.21–5.00 Very High · <strong style="color:var(--accent)">3.41–4.20 High</strong> · 2.61–3.40 Moderate · 1.81–2.60 Low · 1.00–1.80 Very Low. <strong>All five constructs are at a High level.</strong></p>
+
+          <!-- TABLE 2.1 CREATIVITY -->
+          <h3 class="text-lg font-bold mb-3 mt-8" style="color:var(--accent)">Table 2.1 · Level of Entrepreneurial Factors — Creativity</h3>
+          <p class="text-sm mb-3" style="color:var(--muted)">Composite WM = <strong>3.72</strong> · SD = 0.752 · Interpretation = <strong style="color:var(--accent)">High</strong></p>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">#</th>
+                  <th class="text-left py-3 font-semibold">Indicator</th>
+                  <th class="text-right py-3 font-semibold">WM</th>
+                  <th class="text-right py-3 font-semibold">SD</th>
+                  <th class="text-left py-3 font-semibold">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">1</td><td class="py-3">I often come up with creative solutions to problems.</td><td class="py-3 text-right font-semibold">3.80</td><td class="py-3 text-right">0.736</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">2</td><td class="py-3">I am good at providing a fresh approach to problems.</td><td class="py-3 text-right">3.66</td><td class="py-3 text-right">0.748</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">3</td><td class="py-3">I often come up with new and practical ideas.</td><td class="py-3 text-right">3.79</td><td class="py-3 text-right">0.737</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">4</td><td class="py-3">I often have new and innovative ideas.</td><td class="py-3 text-right">3.72</td><td class="py-3 text-right">0.733</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">5</td><td class="py-3">I am good at generating creative ideas.</td><td class="py-3 text-right">3.70</td><td class="py-3 text-right">0.749</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:var(--accent)">6</td><td class="py-3">I often promote and champion ideas to others.</td><td class="py-3 text-right">3.64</td><td class="py-3 text-right">0.800</td><td class="py-3">High</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px;margin-bottom:30px">
+            <strong>Highest:</strong> Creative problem solving (3.80). <strong>Lowest:</strong> Promoting/championing ideas (3.64). Students perceive themselves as consistently creative across all actions — idea generation, innovation, and advocacy. Supported by Jiatong et al. (2021) and Ferreira-Neto et al. (2023), who link creativity directly to both self-efficacy and intention.
+          </p>
+
+          <!-- TABLE 2.2 EE -->
+          <h3 class="text-lg font-bold mb-3 mt-8" style="color:var(--accent)">Table 2.2 · Level of Entrepreneurial Factors — Entrepreneurial Education</h3>
+          <p class="text-sm mb-3" style="color:var(--muted)">Composite WM = <strong>3.98</strong> · SD = 0.736 · Interpretation = <strong style="color:var(--accent)">High</strong> (highest among the three IVs)</p>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">#</th>
+                  <th class="text-left py-3 font-semibold">Indicator</th>
+                  <th class="text-right py-3 font-semibold">WM</th>
+                  <th class="text-right py-3 font-semibold">SD</th>
+                  <th class="text-left py-3 font-semibold">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">1</td><td class="py-3">Formal entrepreneurial education promotes creative ideas.</td><td class="py-3 text-right">3.93</td><td class="py-3 text-right">0.699</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">2</td><td class="py-3">Classroom learning provides required entrepreneurship knowledge.</td><td class="py-3 text-right">3.93</td><td class="py-3 text-right">0.722</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">3</td><td class="py-3">School education drives entrepreneurship skills/abilities.</td><td class="py-3 text-right">3.98</td><td class="py-3 text-right">0.748</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">4</td><td class="py-3">Activities incorporate entrepreneurship and allow venturing.</td><td class="py-3 text-right">3.98</td><td class="py-3 text-right">0.772</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">5</td><td class="py-3">Entrepreneurship opportunities can be enlarged through education.</td><td class="py-3 text-right font-semibold">4.02</td><td class="py-3 text-right">0.750</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:var(--accent)">6</td><td class="py-3">School education drives vocational students to be entrepreneurs.</td><td class="py-3 text-right">3.98</td><td class="py-3 text-right">0.728</td><td class="py-3">High</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px;margin-bottom:30px">
+            <strong>Highest:</strong> Education enlarges entrepreneurial opportunity (4.02). <strong>Lowest (tied):</strong> Classroom knowledge and formal model's creative promotion (3.93). Respondents uniformly endorse school-based entrepreneurship learning as a source of knowledge, skills, and opportunity — consistent with Jiatong et al. (2021), Wang et al. (2023), and Sun et al. (2023).
+          </p>
+
+          <!-- TABLE 2.3 EM -->
+          <h3 class="text-lg font-bold mb-3 mt-8" style="color:var(--accent)">Table 2.3 · Level of Entrepreneurial Factors — Entrepreneurial Mindset</h3>
+          <p class="text-sm mb-3" style="color:var(--muted)">Composite WM = <strong>3.86</strong> · SD = 0.744 · Interpretation = <strong style="color:var(--accent)">High</strong></p>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">#</th>
+                  <th class="text-left py-3 font-semibold">Indicator</th>
+                  <th class="text-right py-3 font-semibold">WM</th>
+                  <th class="text-right py-3 font-semibold">SD</th>
+                  <th class="text-left py-3 font-semibold">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">1</td><td class="py-3">I think about both opportunities & challenges in entrepreneurship.</td><td class="py-3 text-right font-semibold">3.90</td><td class="py-3 text-right">0.735</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">2</td><td class="py-3">I allocate time for entrepreneurial matters.</td><td class="py-3 text-right">3.87</td><td class="py-3 text-right">0.715</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">3</td><td class="py-3">I deliberate financial chances of engaging in entrepreneurship.</td><td class="py-3 text-right">3.85</td><td class="py-3 text-right">0.756</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">4</td><td class="py-3">I evaluate both opportunities & challenges linked to venturing.</td><td class="py-3 text-right">3.85</td><td class="py-3 text-right">0.762</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent)">5</td><td class="py-3">I decide toward ideas for business opportunity.</td><td class="py-3 text-right">3.88</td><td class="py-3 text-right">0.760</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:var(--accent)">6</td><td class="py-3">I assess whether engaging in entrepreneurship is beneficial to me.</td><td class="py-3 text-right">3.82</td><td class="py-3 text-right">0.740</td><td class="py-3">High</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px;margin-bottom:30px">
+            <strong>Highest:</strong> Balanced opportunity/challenge framing (3.90). <strong>Lowest:</strong> Benefit-assessment of venturing (3.82). Students show a reflective, evaluative orientation — weighing opportunities, resources, and risks. Supported by Sun et al. (2023), Jiatong et al. (2021), and Zemlyak et al. (2022).
+          </p>
+
+          <!-- TABLE 3 ESE -->
+          <h3 class="text-lg font-bold mb-3 mt-8" style="color:var(--accent2)">Table 3 · Level of Entrepreneurial Self-Efficacy (Mediator)</h3>
+          <p class="text-sm mb-3" style="color:var(--muted)">Composite WM = <strong>3.88</strong> · SD = 0.787 · Interpretation = <strong style="color:var(--accent2)">High</strong></p>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent2)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">#</th>
+                  <th class="text-left py-3 font-semibold">Indicator</th>
+                  <th class="text-right py-3 font-semibold">WM</th>
+                  <th class="text-right py-3 font-semibold">SD</th>
+                  <th class="text-left py-3 font-semibold">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent2)">1</td><td class="py-3">I can successfully discover new business opportunities.</td><td class="py-3 text-right font-semibold">3.96</td><td class="py-3 text-right">0.768</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent2)">2</td><td class="py-3">I can successfully create new products.</td><td class="py-3 text-right">3.79</td><td class="py-3 text-right">0.804</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:var(--accent2)">3</td><td class="py-3">I can think creatively.</td><td class="py-3 text-right">3.89</td><td class="py-3 text-right">0.775</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:var(--accent2)">4</td><td class="py-3">I can successfully commercialize ideas.</td><td class="py-3 text-right">3.89</td><td class="py-3 text-right">0.795</td><td class="py-3">High</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px;margin-bottom:30px">
+            <strong>Highest:</strong> Opportunity discovery (3.96). <strong>Lowest:</strong> New product creation (3.79). Students are most confident in <em>seeing</em> opportunities and least confident in <em>building</em> products — a common capability gap. Confidence spans opportunity, creativity, and commercialization. Confirmed by Jiatong et al. (2021), Wang et al. (2023), and Xanthopoulou et al. (2024).
+          </p>
+
+          <!-- TABLE 4 EI -->
+          <h3 class="text-lg font-bold mb-3 mt-8" style="color:#0d9488">Table 4 · Level of Entrepreneurial Intention (Dependent Variable)</h3>
+          <p class="text-sm mb-3" style="color:var(--muted)">Composite WM = <strong>3.92</strong> · SD = 0.851 · Interpretation = <strong style="color:#0d9488">High</strong></p>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid #0d9488" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">#</th>
+                  <th class="text-left py-3 font-semibold">Indicator</th>
+                  <th class="text-right py-3 font-semibold">WM</th>
+                  <th class="text-right py-3 font-semibold">SD</th>
+                  <th class="text-left py-3 font-semibold">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#0d9488">1</td><td class="py-3">I am ready to do anything to be an entrepreneur.</td><td class="py-3 text-right">3.85</td><td class="py-3 text-right">0.859</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#0d9488">2</td><td class="py-3">My professional goal is to become an entrepreneur.</td><td class="py-3 text-right">3.74</td><td class="py-3 text-right">0.885</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#0d9488">3</td><td class="py-3">I will make every effort to start and run my own firm.</td><td class="py-3 text-right">3.97</td><td class="py-3 text-right">0.825</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#0d9488">4</td><td class="py-3">I am determined to create a firm in the future.</td><td class="py-3 text-right">3.92</td><td class="py-3 text-right">0.839</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3 font-semibold" style="color:#0d9488">5</td><td class="py-3">I have the firm intention to start a firm someday.</td><td class="py-3 text-right">3.93</td><td class="py-3 text-right">0.849</td><td class="py-3">High</td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold" style="color:#0d9488">6</td><td class="py-3">I have a <strong>strong</strong> intention to start a business someday.</td><td class="py-3 text-right font-semibold">4.09</td><td class="py-3 text-right">0.816</td><td class="py-3">High</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px;margin-bottom:30px">
+            <strong>Highest:</strong> Strong intention to start a business (4.09). <strong>Lowest:</strong> Entrepreneurship as explicit professional goal (3.74). Aspiration is strong and broadly shared, but career identity is less crystallized. Consistent with Anjum et al. (2024), Sun et al. (2023), and Xanthopoulou et al. (2024).
+          </p>
+
+          <!-- MEDIATION -->
+          <h3 class="text-xl font-bold mb-3 mt-10" style="color:var(--accent)">Table 5 · Mediating Effect of Entrepreneurial Self-Efficacy</h3>
+          <p class="text-sm mb-4" style="color:var(--muted)">Mediated regression · IVs: Creativity (C), Entrepreneurial Education (EE), Entrepreneurial Mindset (EM) · Mediator: ESE · DV: EI · <strong>p < .05 = significant</strong></p>
+
+          <div id="medPathChart" style="height:440px;width:100%"></div>
+
+          <div class="overflow-x-auto mt-6 mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr style="color:var(--muted);border-bottom:2px solid var(--accent)" class="text-xs uppercase tracking-wide">
+                  <th class="text-left py-3 font-semibold">Path / Effect</th>
+                  <th class="text-right py-3 font-semibold">B</th>
+                  <th class="text-right py-3 font-semibold">SE</th>
+                  <th class="text-right py-3 font-semibold">p</th>
+                  <th class="text-right py-3 font-semibold">CI 95% Lo</th>
+                  <th class="text-right py-3 font-semibold">CI 95% Hi</th>
+                  <th class="text-center py-3 font-semibold">Sig?</th>
+                </tr>
+              </thead>
+              <tbody style="color:var(--text)">
+                <tr style="background:var(--accent-soft);font-weight:700;color:var(--accent)"><td class="py-3" colspan="7">CREATIVITY → ESE → EI</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">a₁: Creativity → ESE</td><td class="py-3 text-right font-semibold">0.348</td><td class="py-3 text-right">0.059</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.233</td><td class="py-3 text-right">0.464</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">b: ESE → EI (common)</td><td class="py-3 text-right font-semibold">0.309</td><td class="py-3 text-right">0.064</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.184</td><td class="py-3 text-right">0.433</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">c (total): Creativity → EI</td><td class="py-3 text-right">0.171</td><td class="py-3 text-right">0.062</td><td class="py-3 text-right">0.006</td><td class="py-3 text-right">0.050</td><td class="py-3 text-right">0.291</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">c′ (direct): Creativity → EI</td><td class="py-3 text-right">0.063</td><td class="py-3 text-right">0.063</td><td class="py-3 text-right">0.314</td><td class="py-3 text-right">−0.060</td><td class="py-3 text-right">0.186</td><td class="py-3 text-center"><span style="color:#dc2626;font-weight:700">✗</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:2px solid var(--accent)"><td class="py-3 font-semibold">ab (indirect): C → ESE → EI · <span style="color:#059669">FULL MEDIATION</span></td><td class="py-3 text-right font-semibold">0.108</td><td class="py-3 text-right">0.029</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.051</td><td class="py-3 text-right">0.164</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+
+                <tr style="background:var(--accent-soft);font-weight:700;color:var(--accent)"><td class="py-3" colspan="7">ENTREPRENEURIAL EDUCATION → ESE → EI</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">a₂: EE → ESE</td><td class="py-3 text-right font-semibold">0.159</td><td class="py-3 text-right">0.066</td><td class="py-3 text-right">0.016</td><td class="py-3 text-right">0.029</td><td class="py-3 text-right">0.289</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">b: ESE → EI</td><td class="py-3 text-right font-semibold">0.309</td><td class="py-3 text-right">0.064</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.184</td><td class="py-3 text-right">0.433</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">c (total): EE → EI</td><td class="py-3 text-right font-semibold">0.322</td><td class="py-3 text-right">0.069</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.186</td><td class="py-3 text-right">0.457</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">c′ (direct): EE → EI</td><td class="py-3 text-right font-semibold">0.273</td><td class="py-3 text-right">0.067</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.142</td><td class="py-3 text-right">0.403</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:2px solid var(--accent)"><td class="py-3 font-semibold">ab (indirect): EE → ESE → EI · <span style="color:#059669">PARTIAL MEDIATION</span></td><td class="py-3 text-right font-semibold">0.049</td><td class="py-3 text-right">0.023</td><td class="py-3 text-right">0.031</td><td class="py-3 text-right">0.004</td><td class="py-3 text-right">0.094</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+
+                <tr style="background:var(--accent-soft);font-weight:700;color:var(--accent)"><td class="py-3" colspan="7">ENTREPRENEURIAL MINDSET → ESE → EI</td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">a₃: EM → ESE</td><td class="py-3 text-right font-semibold">0.452</td><td class="py-3 text-right">0.073</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.309</td><td class="py-3 text-right">0.595</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">b: ESE → EI</td><td class="py-3 text-right font-semibold">0.309</td><td class="py-3 text-right">0.064</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.184</td><td class="py-3 text-right">0.433</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">c (total): EM → EI</td><td class="py-3 text-right font-semibold">0.446</td><td class="py-3 text-right">0.076</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.297</td><td class="py-3 text-right">0.596</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row" style="border-bottom:1px solid var(--border)"><td class="py-3">c′ (direct): EM → EI</td><td class="py-3 text-right font-semibold">0.307</td><td class="py-3 text-right">0.078</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.154</td><td class="py-3 text-right">0.460</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+                <tr class="tbl-row"><td class="py-3 font-semibold">ab (indirect): EM → ESE → EI · <span style="color:#059669">PARTIAL MEDIATION</span></td><td class="py-3 text-right font-semibold">0.140</td><td class="py-3 text-right">0.037</td><td class="py-3 text-right"><.001</td><td class="py-3 text-right">0.068</td><td class="py-3 text-right">0.211</td><td class="py-3 text-center"><span style="color:#059669;font-weight:700">✓</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="border-left:4px solid var(--accent);background:var(--accent-soft);padding:16px 20px;border-radius:0 10px 10px 0;line-height:1.8">
+            <p class="font-bold mb-1" style="color:var(--accent)">Key Mediation Findings</p>
+            <p><strong style="color:var(--text)">1. Creativity → EI:</strong> <span style="color:#059669;font-weight:700">FULL MEDIATION</span>. Total effect significant (p=.006), but direct effect vanishes (p=.314) when ESE enters. <em>Creativity raises intention ONLY by first building confidence.</em></p>
+            <p><strong style="color:var(--text)">2. Education → EI:</strong> <span style="color:#059669;font-weight:700">PARTIAL MEDIATION</span>. Both direct (B=.273, p<.001) and indirect (B=.049, p=.031) paths are significant. <em>Education raises intention on its own AND also through confidence.</em></p>
+            <p><strong style="color:var(--text)">3. Mindset → EI:</strong> <span style="color:#059669;font-weight:700">PARTIAL MEDIATION</span>. Strongest a-path (B=.452), strongest total effect (B=.446), strongest indirect effect (B=.140). <em>Mindset is the most powerful driver of both confidence and intention.</em></p>
+            <p><strong style="color:var(--text)">4. ESE → EI:</strong> Consistent B = 0.309, p < .001 across all models. Confidence reliably converts into intention.</p>
+          </div>
+          <p style="line-height:1.7;color:var(--text);font-size:14px;margin-top:14px">
+            All results align with Jiatong et al. (2021), Wang et al. (2023), and Sun et al. (2023). ESE functions as a <strong>key psychological mechanism</strong> that translates personal qualities and learning into behavioral intention.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===================== CHAPTER 4 ===================== -->
+      <div class="chapter-section" id="ch4">
+        <div class="rounded-2xl p-7 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <h2 class="text-2xl font-bold mb-5" style="color:var(--accent)">Chapter 4 · Summary, Conclusions & Recommendations</h2>
+
+          <h3 class="text-lg font-bold mb-3" style="color:var(--text)">Summary of Findings</h3>
+          <ol style="line-height:1.9;color:var(--text);padding-left:22px">
+            <li><strong>Demographics:</strong> Predominantly female (74%), 4th-year (35.8%), BSBA FM (39.8%), BSA (31.3%), BSBA MM (26.0%), BSBA HRDM (2.8%).</li>
+            <li><strong>Entrepreneurial factors are HIGH:</strong> Creativity WM = 3.72; Entrepreneurial Education WM = 3.98 (highest IV); Entrepreneurial Mindset WM = 3.86.</li>
+            <li><strong>Mediator & outcome are HIGH:</strong> Entrepreneurial Self-Efficacy WM = 3.88; Entrepreneurial Intention WM = 3.92.</li>
+            <li><strong>All IVs → ESE and IVs → EI are significant (p < .05).</strong> Stronger creativity, education, and mindset predict both greater confidence and stronger intention.</li>
+            <li><strong>ESE → EI is significant (B = 0.309, p < .001).</strong> Greater confidence predicts stronger intention.</li>
+            <li><strong>Mediation confirmed for all three IVs:</strong>
+              <ul style="margin-top:6px">
+                <li>Creativity → EI: <strong style="color:var(--accent)">Full mediation</strong> via ESE (indirect B = 0.108, p < .001; direct n.s.).</li>
+                <li>Entrepreneurial Education → EI: <strong style="color:var(--accent)">Partial mediation</strong> via ESE (indirect B = 0.049, p = .031; direct B = 0.273, p < .001).</li>
+                <li>Entrepreneurial Mindset → EI: <strong style="color:var(--accent)">Partial mediation</strong> via ESE (indirect B = 0.140, p < .001; direct B = 0.307, p < .001).</li>
+              </ul>
+            </li>
+            <li><strong>Proposed strategy:</strong> Experiential learning, mentoring, business simulations, product development, pitching, and real-venture exposure — all designed to strengthen ESE as the central lever.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Conclusions</h3>
+          <ol style="line-height:1.9;color:var(--text);padding-left:22px">
+            <li>Respondents manifest a <strong>consistently High level</strong> of creativity, entrepreneurial education perception, entrepreneurial mindset, self-efficacy, and intention — indicating strong entrepreneurial readiness across the board.</li>
+            <li>Creativity, education, and mindset are <strong>significant positive predictors</strong> of both entrepreneurial self-efficacy and entrepreneurial intention; stronger inputs are associated with stronger confidence and stronger career intent.</li>
+            <li>Entrepreneurial self-efficacy is itself a <strong>strong, reliable predictor</strong> of intention — confidence directly translates into willingness to pursue venturing.</li>
+            <li>Self-efficacy is a <strong>key explanatory mechanism</strong>: it fully carries the effect of creativity onto intention, and partially carries the effects of education and mindset. Without building confidence, creativity alone does not move intention.</li>
+            <li>Findings strongly support <strong>Social Cognitive Theory</strong> in the Philippine entrepreneurship education context: personal, educational, and cognitive factors interact to shape self-beliefs, which then drive behavioral intention.</li>
+            <li>An integrated strategy targeting <strong>all four proximal levers</strong> — creativity, education, mindset, and especially self-efficacy — is justified to sustain and raise student entrepreneurial intention.</li>
+          </ol>
+
+          <h3 class="text-lg font-bold mb-3 mt-7" style="color:var(--text)">Recommendations</h3>
+          <div class="space-y-3 mt-3">
+            <div class="p-4 rounded-xl" style="border-left:4px solid var(--accent);background:var(--accent-soft)">
+              <p class="font-bold" style="color:var(--accent)">1. School & Program Administrators</p>
+              <p style="color:var(--text);line-height:1.7;margin-top:4px">Sustain and strengthen entrepreneurial factors by infusing <strong>creativity-driven and problem-solving activities</strong> across relevant subjects — idea-generation exercises, innovation challenges, real business cases — so students practice feasible solution-building, idea communication, opportunity evaluation, and risk/resource judgment.</p>
+            </div>
+            <div class="p-4 rounded-xl" style="border-left:4px solid var(--accent2);background:var(--accent2-soft)">
+              <p class="font-bold" style="color:var(--accent2)">2. Experiential & Performance-Based Learning</p>
+              <p style="color:var(--text);line-height:1.7;margin-top:4px">Continuously implement structured, hands-on opportunities: <strong>product development tasks, business pitching, mini-simulations, market-exposure projects</strong>. These concretely reinforce confidence in entrepreneurial skills and strengthen post-graduation venturing readiness.</p>
+            </div>
+            <div class="p-4 rounded-xl" style="border-left:4px solid #0d9488;background:rgba(13,148,136,.10)">
+              <p class="font-bold" style="color:#0d9488">3. Curricular Design — Beyond Theory</p>
+              <p style="color:var(--text);line-height:1.7;margin-top:4px">Intentionally connect creativity, education, and mindset development to <strong>both self-efficacy and intention</strong>. Ensure entrepreneurship instruction includes <strong>guided practice, constructive feedback, and structured reflection</strong> so learning becomes perceived capability and commitment.</p>
+            </div>
+            <div class="p-4 rounded-xl" style="border-left:4px solid #dc2626;background:rgba(220,38,38,.08)">
+              <p class="font-bold" style="color:#dc2626">4. Targeted Self-Efficacy Interventions</p>
+              <p style="color:var(--text);line-height:1.7;margin-top:4px">Because ESE directly strengthens intention, establish <strong>mentoring, coaching, and skills-building workshops</strong> on opportunity recognition, business planning, financial decision-making, and commercialization. Per Bandura's theory, prioritize <em>mastery experiences</em> (real tasks completed), <em>vicarious learning</em> (peer/mentor modeling), <em>social persuasion</em> (encouraging feedback), and <em>physiological/emotional management</em>.</p>
+            </div>
+            <div class="p-4 rounded-xl" style="border-left:4px solid #7c3aed;background:rgba(124,58,237,.09)">
+              <p class="font-bold" style="color:#7c3aed">5. Institutionalize the Strategy with Stakeholders</p>
+              <p style="color:var(--text);line-height:1.7;margin-top:4px">Formalize the intervention program through collaboration among <strong>administrators, faculty, and external partners</strong>. Build linkages with local entrepreneurs, business communities, and agencies for training, mentorship, and real-world exposure. Monitor progress via regular evaluation of skill development, confidence outcomes, and sustained intention.</p>
+            </div>
+            <div class="p-4 rounded-xl" style="border-left:4px solid #0ea5e9;background:rgba(14,165,233,.09)">
+              <p class="font-bold" style="color:#0ea5e9">6. Future Researchers</p>
+              <p style="color:var(--text);line-height:1.7;margin-top:4px">Conduct <strong>qualitative or mixed-method studies</strong> exploring how creativity, education, and mindset are formed; how self-efficacy translates into intention in lived experience; and which specific school/community factors shape confidence and readiness. Include in-depth interviews, FGDs, or case studies capturing barriers, supports, and personal journeys. Consider larger, more diverse samples across multiple universities to improve generalizability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== REFERENCES ===================== -->
+      <div class="chapter-section" id="ch5">
+        <div class="rounded-2xl p-7 mb-8" style="background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.05)">
+          <h2 class="text-2xl font-bold mb-5" style="color:var(--accent)">References</h2>
+          <div style="line-height:1.7;color:var(--text);font-size:14px" id="refsList"></div>
+        </div>
+      </div>
+
+      <!-- ===================== FOOTER ===================== -->
+      <div class="mt-14 pt-6 text-center" style="border-top:1px solid var(--border)">
+        <p class="text-xs" style="color:var(--muted)">Madriaga, Urian, Parole, Adriano, Camua, Narcida · La Consolacion University Philippines · College of Business Entrepreneurship and Accountancy · 2025</p>
+        <p class="text-xs mt-1" style="color:var(--muted)">Grounded in Social Cognitive Theory (Bandura, 1986) · Instrument adapted from Jiatong et al. (2021)</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+// ========== REFERENCES POPULATION ==========
+(function(){
+  var refs = [
+    "Altınay, L., Kromidha, E., Nurmagambetova, A., Alrawadieh, Z., & Madanoglu, G. K. (2021). A social cognition perspective on entrepreneurial personality traits and intentions to start a business: Does creativity matter? <em>Management Decision</em>. https://doi.org/10.1108/md-12-2020-1592",
+    "Anderson, M., & Hjertstrand, P. (2021). Strategic thinking and creativity in business model innovation: A quantitative analysis of firm-level practices. <em>Journal of Strategy and Management, 14</em>(4), 589–604. https://doi.org/10.1108/JSMA-03-2021-0071",
+    "Anjum, T., Díaz Tautiva, J. A., Zaheer, M. A., & Heidler, P. (2024). Entrepreneurial intentions: Entrepreneurship education programs, cognitive motivational factors of planned behavior, and business incubation centers. <em>Education Sciences, 14</em>(9), 983. https://doi.org/10.3390/educsci14090983",
+    "Anjum, T., Farrukh, M., Heidler, P., & Díaz Tautiva, J. A. (2020). Entrepreneurial intention: Creativity, entrepreneurship, and university support. <em>Journal of Open Innovation: Technology, Market and Complexity, 7</em>(1), 11.",
+    "Ashraf, M. A., Rahim, M. Z. bin A., Qureshi, I. M., & Hanif, M. (2024). Impact of Entrepreneurial Mindset and Alertness on Converting Education into Entrepreneurial Intentions: A Study of Pakistani University Students. <em>Sustainability, 16</em>(21), 9345.",
+    "Ayele, W. (2021). Adapting CRISP-DM for Idea Mining: A Data Mining Process for Generating Ideas Using a Textual Dataset. <em>International Journal of Advanced Computer Science and Applications</em>. https://doi.org/10.14569/issn.2156-5570",
+    "Badrun, L. O. M., & Syukur, L. A. (2024). The role of creativity in entrepreneurship Development. <em>Journal of Entrepreneurship Research, 5</em>(2). https://doi.org/10.37985/jer.v5i2.976",
+    "Barkova, K. (2025). Integrating creative thinking into innovation-oriented management strategies. <em>Ukrainian Journal of Applied Economics and Technology</em>. https://doi.org/10.36887/2415-8453-2025-2-43",
+    "Bashir, M., et al. (2020). Business model innovation for competitive advantage.",
+    "Bell, R., & Cui, J. (2022). Behavioral entrepreneurial mindset: How entrepreneurial education activity impacts entrepreneurial intention and behaviour. <em>The International Journal of Management Education, 20</em>(2), 100639.",
+    "Brem, A., & Puente-Díaz, R. (2020). Creativity, Innovation, Sustainability: A Conceptual Model for Future Research Efforts. <em>Sustainability, 12</em>(8), 3139. https://doi.org/10.3390/su12083139",
+    "Cacciatore, S. (2023). Creativity and leadership: How the arts can improve business Strategies. <em>Journal of Educational Research, 1</em>, 278653. https://doi.org/10.31866/2709-846x.1.2023.278653",
+    "Cavallo, A., Cosenz, F., & Noto, G. (2023). Business model scaling and growth hacking in digital entrepreneurship. <em>Journal of Small Business Management, 62</em>(4), 1–28.",
+    "Cunha, J., Ferreira, C., Araújo, M., & Nunes, M. L. (2022). The mediating role of Entrepreneurial intention between creativity and social innovation tendency. <em>Social Enterprise Journal, 18</em>(2), 383–405.",
+    "D'Armas Regnault, M., et al. (2024). Characterizing the entrepreneurial profile of university students from a developing country. <em>Frontiers in Education, 9</em>, 1443476.",
+    "Degefu, M. E., Verma, P., & Ranabhat, D. (2024). Entrepreneurial mindset assessment: a systematic literature review using PRISMA model. <em>F1000Research, 13</em>, 1020.",
+    "Deliana, M. (2023). Self-Efficacy as A Factor of Entrepreneurial Intention. <em>Journal of Education, Humaniora and Social Sciences, 5</em>(4), 2573–2580.",
+    "Do, Q. N., & Nguyen, H. T. (2023). Entrepreneurship education and entrepreneurial intention: The mediating role of entrepreneurial capacity. <em>International Journal of Management Education, 21</em>(1), 100730.",
+    "Elbaz, A. M., et al. (2025). Entrepreneurship Education, mindset and entrepreneurial intentions: the moderating effects of creativity and role models. <em>International Journal of Management Education, 23</em>(3), 101240.",
+    "Entrialgo, M., & Iglesias, V. (2020). Entrepreneurial intentions among university students: The moderating role of creativity. <em>European Management Review</em>.",
+    "Ferreira-Neto, M. N., et al. (2023). The role of self-efficacy, entrepreneurial passion, and creativity in developing entrepreneurial intentions. <em>Frontiers in Psychology</em>.",
+    "Ghazali, E., et al. (2022). How entrepreneurial mindset and Big Five personality traits affect intention to become an entrepreneur.",
+    "Handayati, P., et al. (2020). Does entrepreneurship education promote vocational students' entrepreneurial mindset? <em>Heliyon, 6</em>(11), e05426.",
+    "Han, Y., Zhou, Y., & Lu, Q. (2022). Strategic thinking and business success: Evidence From entrepreneurship education. <em>Frontiers in Psychology, 13</em>, 971654.",
+    "Hermio, A. (2021). The Impact of Self-Efficacy on Entrepreneurship Performance.",
+    "Huang, B. (2023). The Influence of Science and Technology Innovation Perception Education on Entrepreneurial Intention of College Students. <em>IJET, 18</em>(19), 128–146.",
+    "Husnah, E. M., et al. (2024). Enhancing students' innovation and entrepreneurial intention through digital marketing education: A systematic literature review. <em>Journal of Educational Analytics, 3</em>(2), 201–212.",
+    "Indhirapratha, S., & Thavaraj, H. S. (2024). Innovativeness and entrepreneurial intention among students – Global review. <em>EPRA IJRD, 9</em>(8).",
+    "Jiang, Y., et al. (2022). The relationship between college students' entrepreneurial intention and the teaching quality of innovation and entrepreneurship practice. <em>iJET, 17</em>(12), 61–76.",
+    "Jiatong, W., et al. (2021). Impact of entrepreneurial education, mindset, and creativity on entrepreneurial intention: Mediating role of entrepreneurial self-efficacy. <em>Frontiers in Psychology, 12</em>, 724440. https://doi.org/10.3389/fpsyg.2021.724440",
+    "Kakouris, A. (2021). Teaching creativity in entrepreneurship: Embolden or discourage? <em>Entrepreneurship & Regional Development</em>.",
+    "Kurek, K., et al. (2023). The role of design thinking in Entrepreneurship education. <em>Sustainability, 15</em>(2), 988.",
+    "Lee, S., Kang, M.-J., & Kim, B.-K. (2022). Factors influencing entrepreneurial intention: Focusing on individuals' knowledge exploration and exploitation activities. <em>JOITMC, 8</em>(3), 165.",
+    "Li, X., Li, Q., & Lu, Z. (2022). Creativity, business growth, and business model innovation: Evidence from entrepreneurship programs. <em>Frontiers in Psychology, 13</em>, 892716.",
+    "Li, Y., et al. (2023). Effect of entrepreneurial education and creativity on entrepreneurial intention in college students: mediating entrepreneurial Inspiration, mindset, and self-efficacy. <em>Frontiers in Psychology</em>.",
+    "Maqbool, S., et al. (2024). Fostering Entrepreneurial Mindset through Entrepreneurial Education: A Qualitative Study.",
+    "McGee, J. E., & Terry, R. P. (2024). COVID-19 as an external enabler: The role of entrepreneurial self-efficacy and entrepreneurial orientation. <em>Journal of Small Business Management, 62</em>(2), 1058–1083.",
+    "Naseem, M., et al. (2023). Impact of IoT and Resource Based View on Digital Business: The role of Strategic Thinking Leadership. <em>IEEE</em>.",
+    "Niu, X., et al. (2022). What are the key drivers to promote entrepreneurial intention of vocational college students? <em>Frontiers in Psychology, 13</em>, 1021969.",
+    "Novelli, C., & Spina, L. (2024). Evidence-based entrepreneurship decision-making: Reducing risks and improving outcomes. <em>Strategic Management Journal, 45</em>(6), 1120–1135.",
+    "Oluwaseun, O., et al. (2020). Entrepreneurial Mindset and Enterprise Success: The Role of Government Policy. <em>International Journal of Business Management, 8</em>(3).",
+    "Paiva, L. E. B., et al. (2024). Innovation and sustainability from the perspective of entrepreneurial intention: a cross-cultural approach. <em>Education + Training, 66</em>(7), 831–850.",
+    "Pérez-Macías, N., et al. (2023). Active learning in entrepreneurship education: Impact on risk-taking and entrepreneurial intentions. <em>JBEM, 24</em>(4), 812–829.",
+    "Pham, N. T., et al. (2023). Entrepreneurship knowledge and digital start-up intentions: The mediating role of innovation. <em>Journal of Innovation and Entrepreneurship, 12</em>, 27.",
+    "Phuong, N. N.-D., Mai, K. N., & Le, T.-H. (2023). Strategic perspectives, creativity, and financial performance in Vietnamese SMEs. <em>Heliyon, 9</em>(9), e20354.",
+    "Rachmadana, S. L., & Diarra, S. (2024). The impact of entrepreneurship education and motivation on entrepreneurial intentions: Creativity as a mediating factor. <em>Pioneer Journal of Educational Research, 2</em>(3).",
+    "Rae, J. (2022). Connecting for creativity in higher education. <em>Innovative Higher Education</em>.",
+    "Ramadani, V., et al. (2022). Entrepreneurship education and graduates' entrepreneurial intentions: Does gender matter? <em>Technological Forecasting and Social Change, 180</em>, 121734.",
+    "Relente, A. R. R., & Capistrano, E. P. S. (2024). Innovation self-efficacy, theory of planned behavior, and entrepreneurial intentions: The perspective of young Filipinos. <em>Asia Pacific Management Review, 30</em>(3), 100350.",
+    "Remilekun, O., et al. (2023). A Comprehensive Conceptual Framework for Designing and Executing Effective Go-To-Market Strategies.",
+    "Saoula, O., et al. (2023). Do entrepreneurial self-efficacy, entrepreneurial motivation, and family support enhance entrepreneurial intention? <em>APJIE, 17</em>(1), 20–45.",
+    "Shabbir, M. S. (2025). Entrepreneurial mindset: Skills, attitudes, and intentions in information technology.",
+    "Shi, Y., et al. (2020). Investigating the relationship between creativity and entrepreneurial intention: The moderating role of creativity in TPB. <em>Frontiers in Psychology</em>.",
+    "Spieth, P., et al. (2020). Business model innovation — conceptual foundations.",
+    "Sun, J., et al. (2023). From entrepreneurship education to entrepreneurial intention: Mindset, motivation, and prior exposure. <em>Frontiers in Psychology, 14</em>, 954118.",
+    "Taghizadeh, S. K., et al. (2024). Does entrepreneurial intention for innovation at firm-level matter to affect performance? <em>International Journal of Entrepreneurship and Innovation, 25</em>(4), 263–273.",
+    "Tahan, N. (2025). Entrepreneurial education, psychological capital, and opportunity Recognition among students. <em>Administrative Sciences, 15</em>(7), 261.",
+    "Wang, X. H., Chang, Y. X., & Chou, Y. K. (2023). The effect of entrepreneurship education on entrepreneurial intention: Mediation of entrepreneurial self-efficacy. <em>Sustainability, 15</em>(3), 2562.",
+    "Wardana, L. W., et al. (2020). The impact of entrepreneurship education and students' entrepreneurial mindset: the mediating role of attitude and self-efficacy. <em>Heliyon, 6</em>(9), e04922.",
+    "Wardana, L. W., et al. (2024). Does entrepreneurial self-efficacy really matter for entrepreneurial intention? Lesson from covid-19. <em>Cogent Education, 11</em>(1).",
+    "Wiyanto, H., et al. (2024). The Effect of Self-Efficacy on Entrepreneurial Success: A Study of Entrepreneurial Intentions as Mediators.",
+    "Xanthopoulou, P., Kokkalis, P., & Karyotakis, K. M. (2024). Students' entrepreneurial intention and its influencing factors: A systematic literature review. <em>Administrative Sciences, 14</em>(5), 98.",
+    "You, X. (2022). Design thinking as a bridge between creativity and strategy in entrepreneurship. <em>Journal of Innovation and Entrepreneurship, 11</em>, 51.",
+    "Zemlyak, S., et al. (2022). Measuring the entrepreneurial mindset: The motivations behind the behavioral intentions of starting a sustainable business. <em>Sustainability, 14</em>(23), 15997.",
+    "Zhao, J., et al. (2022). Creativity, business model innovation, and enterprise growth.",
+    "Zhou, K. & George (2021). Creative personality and goal orientation on innovation performance.",
+    "Zhou, W. (2023). Entrepreneurial education and startup survival: The moderating role of hands-on practice. <em>SAGE Open, 13</em>(4)."
+  ];
+  var html = "";
+  refs.forEach(function(r,i){ html += '<p style="margin-bottom:10px;padding-left:28px;text-indent:-28px"><span style="display:inline-block;width:24px;color:var(--accent);font-weight:700">'+(i+1)+'.</span>'+r+'</p>'; });
+  document.getElementById('refsList').innerHTML = html;
+})();
+
+// ========== TABS ==========
+(function(){
+  var tabs = document.querySelectorAll('#chapTabs .tab-btn');
+  var sections = document.querySelectorAll('.chapter-section');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.classList.remove('active')});
+      sections.forEach(function(s){s.classList.remove('active')});
+      t.classList.add('active');
+      document.getElementById('ch'+t.dataset.ch).classList.add('active');
+      window.scrollTo({top:document.getElementById('chapTabs').offsetTop-20,behavior:'smooth'});
+      setTimeout(function(){window.dispatchEvent(new Event('resize'))},350);
+    });
+  });
+})();
+
+// ========== ACCORDIONS ==========
+(function(){
+  document.querySelectorAll('.accordion-head').forEach(function(h){
+    h.addEventListener('click',function(){
+      var id = h.dataset.acc;
+      var body = document.getElementById(id);
+      var chev = h.querySelector('.chev');
+      body.classList.toggle('open');
+      chev.classList.toggle('open');
+    });
+  });
+})();
+
+// ========== ECHARTS GLOBAL ==========
+var PAL = {accent:'#6366f1',accent2:'#d97706',teal:'#0d9488',rose:'#e11d48',emerald:'#10b981',muted:'#64748b',text:'#0f172a',border:'rgba(15,23,42,.08)',card:'#ffffff'};
+
+function retryChart(id, fn, n){
+  n = n||0;
+  try{
+    var el = document.getElementById(id);
+    if(!el) return;
+    if(typeof echarts === 'undefined'){ if(n<50){setTimeout(function(){retryChart(id,fn,n+1)},200);} return; }
+    var c = echarts.init(el); fn(c);
+    window.addEventListener('resize',function(){c.resize()});
+  }catch(e){console.error(e);}
+}
+
+// ========== CHART: CONCEPTUAL FRAMEWORK ==========
+retryChart('cfChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'item',formatter:'{b}'},
+    series:[{
+      type:'graph',layout:'force',
+      roam:false,draggable:false,
+      force:{repulsion:550,edgeLength:140,gravity:0.05},
+      label:{show:true,position:'inside',formatter:'{b}',fontSize:12,fontWeight:700,color:'#fff',lineHeight:14,width:110,overflow:'break'},
+      edgeSymbol:['none','arrow'],edgeSymbolSize:[0,10],
+      lineStyle:{color:PAL.muted,width:2.5,curveness:0},
+      emphasis:{focus:'adjacency'},
+      categories:[
+        {name:'Independent',itemStyle:{color:PAL.accent}},
+        {name:'Mediator',itemStyle:{color:PAL.accent2}},
+        {name:'Dependent',itemStyle:{color:PAL.teal}}
+      ],
+      data:[
+        {name:'Creativity',category:0,symbolSize:70,x:120,y:80},
+        {name:'Entrepreneurial\nEducation',category:0,symbolSize:70,x:120,y:200},
+        {name:'Entrepreneurial\nMindset',category:0,symbolSize:70,x:120,y:320},
+        {name:'Entrepreneurial\nSelf-Efficacy',category:1,symbolSize:85,x:420,y:200},
+        {name:'Entrepreneurial\nIntention',category:2,symbolSize:85,x:700,y:200}
+      ],
+      links:[
+        {source:0,target:3,lineStyle:{color:PAL.accent}},
+        {source:1,target:3,lineStyle:{color:PAL.accent}},
+        {source:2,target:3,lineStyle:{color:PAL.accent}},
+        {source:3,target:4,lineStyle:{color:PAL.accent2,width:3}},
+        {source:0,target:4,lineStyle:{color:PAL.muted,type:'dashed',curveness:0.25}},
+        {source:1,target:4,lineStyle:{color:PAL.muted,type:'dashed'}},
+        {source:2,target:4,lineStyle:{color:PAL.muted,type:'dashed',curveness:-0.25}}
+      ]
+    }]
+  });
+});
+
+// ========== CHART: PROGRAM DONUT ==========
+retryChart('progChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    title:{text:'Respondents by Program',left:'center',top:5,textStyle:{fontSize:14,color:PAL.text,fontWeight:700}},
+    tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},
+    legend:{bottom:5,textStyle:{color:PAL.muted,fontSize:11}},
+    color:[PAL.accent,PAL.accent2,PAL.teal,PAL.rose],
+    series:[{
+      type:'pie',radius:['42%','68%'],center:['50%','52%'],avoidLabelOverlap:true,
+      itemStyle:{borderRadius:8,borderColor:PAL.card,borderWidth:2},
+      label:{formatter:'{b}\n{d}%',color:PAL.text,fontSize:11,fontWeight:600},
+      data:[
+        {value:98,name:'BSBA FM'},{value:77,name:'BSA'},
+        {value:64,name:'BSBA MM'},{value:7,name:'BSBA HRDM'}
+      ]
+    }]
+  });
+});
+
+// ========== CHART: YEAR BAR ==========
+retryChart('yearChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    title:{text:'Respondents by Year Level',left:'center',top:5,textStyle:{fontSize:14,color:PAL.text,fontWeight:700}},
+    tooltip:{trigger:'axis'},
+    grid:{left:'8%',right:'8%',bottom:'12%',top:'22%',containLabel:true},
+    xAxis:{type:'category',data:['1st Year','2nd Year','3rd Year','4th Year'],
+      axisLabel:{color:PAL.muted,fontSize:11},axisLine:{lineStyle:{color:PAL.border}},axisTick:{show:false}},
+    yAxis:{type:'value',name:'n',nameTextStyle:{color:PAL.muted},
+      axisLabel:{color:PAL.muted},splitLine:{lineStyle:{color:PAL.border}}},
+    series:[{
+      type:'bar',barWidth:'50%',
+      data:[
+        {value:50,itemStyle:{color:PAL.accent,borderRadius:[8,8,0,0]}},
+        {value:48,itemStyle:{color:PAL.accent2,borderRadius:[8,8,0,0]}},
+        {value:60,itemStyle:{color:PAL.teal,borderRadius:[8,8,0,0]}},
+        {value:88,itemStyle:{color:PAL.rose,borderRadius:[8,8,0,0]}}
+      ],
+      label:{show:true,position:'top',color:PAL.text,fontWeight:700,formatter:'{c}\n({d}%)'}
+    }]
+  });
+});
+
+// ========== CHART: GENDER ==========
+retryChart('genderChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    title:{text:'Gender Distribution',left:'center',top:5,textStyle:{fontSize:14,color:PAL.text,fontWeight:700}},
+    tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},
+    legend:{bottom:5,textStyle:{color:PAL.muted,fontSize:11}},
+    color:[PAL.accent,PAL.accent2],
+    series:[{
+      type:'pie',radius:['45%','70%'],center:['50%','52%'],
+      itemStyle:{borderRadius:8,borderColor:PAL.card,borderWidth:2},
+      label:{formatter:'{b}\n{c} ({d}%)',color:PAL.text,fontSize:12,fontWeight:700},
+      data:[{value:182,name:'Female'},{value:64,name:'Male'}]
+    }]
+  });
+});
+
+// ========== CHART: YEAR LEVEL (DEMO) ==========
+retryChart('demoYearChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    title:{text:'Year Level Distribution',left:'center',top:5,textStyle:{fontSize:14,color:PAL.text,fontWeight:700}},
+    tooltip:{trigger:'axis',formatter:'{b}<br/>{c} respondents ({d}%)'},
+    grid:{left:'8%',right:'8%',bottom:'12%',top:'20%',containLabel:true},
+    xAxis:{type:'category',data:['1st Year','2nd Year','3rd Year','4th Year'],
+      axisLabel:{color:PAL.muted,fontSize:11},axisLine:{lineStyle:{color:PAL.border}},axisTick:{show:false}},
+    yAxis:{type:'value',max:100,axisLabel:{color:PAL.muted,formatter:'{value}'},splitLine:{lineStyle:{color:PAL.border}}},
+    series:[{
+      type:'bar',barWidth:'55%',
+      data:[
+        {value:50,itemStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:PAL.accent},{offset:1,color:'#a5b4fc'}]},borderRadius:[10,10,0,0]}},
+        {value:48,itemStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:PAL.accent2},{offset:1,color:'#fcd34d'}]},borderRadius:[10,10,0,0]}},
+        {value:60,itemStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:PAL.teal},{offset:1,color:'#5eead4'}]},borderRadius:[10,10,0,0]}},
+        {value:88,itemStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:PAL.rose},{offset:1,color:'#fda4af'}]},borderRadius:[10,10,0,0]}}
+      ],
+      label:{show:true,position:'top',color:PAL.text,fontWeight:700,formatter:'{c}  ({d}%)'}
+    }]
+  });
+});
+
+// ========== CHART: COMPOSITE WM ==========
+retryChart('compChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},
+    grid:{left:'5%',right:'5%',bottom:'8%',top:'10%',containLabel:true},
+    xAxis:{type:'value',min:3.4,max:4.1,
+      axisLabel:{color:PAL.muted},splitLine:{lineStyle:{color:PAL.border}}},
+    yAxis:{type:'category',data:['Entrepreneurial\nEducation','Entrepreneurial\nIntention','Entrepreneurial\nSelf-Efficacy','Entrepreneurial\nMindset','Creativity'].reverse(),
+      axisLabel:{color:PAL.text,fontWeight:600,fontSize:12},axisLine:{show:false},axisTick:{show:false}},
+    series:[{
+      type:'bar',barWidth:'55%',
+      data:[
+        {value:3.98,itemStyle:{color:PAL.accent,borderRadius:[0,10,10,0]}},
+        {value:3.92,itemStyle:{color:PAL.teal,borderRadius:[0,10,10,0]}},
+        {value:3.88,itemStyle:{color:PAL.accent2,borderRadius:[0,10,10,0]}},
+        {value:3.86,itemStyle:{color:'#8b5cf6',borderRadius:[0,10,10,0]}},
+        {value:3.72,itemStyle:{color:PAL.rose,borderRadius:[0,10,10,0]}}
+      ].reverse(),
+      label:{show:true,position:'right',color:PAL.text,fontWeight:800,fontSize:14,formatter:'{c} · High'}
+    },{
+      type:'scatter',symbol:'none',data:[4.21],markLine:{
+        silent:true,symbol:'none',
+        lineStyle:{color:PAL.muted,type:'dashed',width:1.5},
+        label:{formatter:'Very High ≥ 4.21',color:PAL.muted,fontSize:11,position:'end'},
+        data:[{xAxis:4.21}]
+      }
+    }]
+  });
+});
+
+// ========== CHART: MEDIATION PATH DIAGRAM ==========
+retryChart('medPathChart',function(c){
+  c.setOption({
+    backgroundColor:'transparent',
+    title:{text:'Mediation Path Model · Unstandardized Regression Coefficients (B)',
+      left:'center',top:5,textStyle:{fontSize:14,color:PAL.text,fontWeight:700}},
+    tooltip:{trigger:'item',formatter:function(p){
+      if(p.dataType==='edge') return p.data.name+': B = '+p.data.value;
+      return p.name;
+    }},
+    series:[{
+      type:'graph',layout:'none',roam:false,draggable:false,
+      label:{show:true,position:'inside',formatter:'{b}',fontSize:11,fontWeight:700,color:'#fff',lineHeight:13,width:110,overflow:'break'},
+      edgeLabel:{show:true,formatter:'B = {c}',fontSize:11,fontWeight:800,color:PAL.text,
+        backgroundColor:PAL.card,padding:[2,6],borderRadius:6,borderWidth:1,borderColor:PAL.border},
+      edgeSymbol:['none','arrow'],edgeSymbolSize:[0,10],
+      lineStyle:{width:3,curveness:0},
+      categories:[
+        {name:'IV',itemStyle:{color:PAL.accent}},
+        {name:'Mediator',itemStyle:{color:PAL.accent2}},
+        {name:'DV',itemStyle:{color:PAL.teal}}
+      ],
+      data:[
+        {name:'Creativity',category:0,symbolSize:60,x:90,y:90},
+        {name:'Entrepreneurial\nEducation',category:0,symbolSize:60,x:90,y:220},
+        {name:'Entrepreneurial\nMindset',category:0,symbolSize:60,x:90,y:350},
+        {name:'Entrepreneurial\nSelf-Efficacy',category:1,symbolSize:75,x:420,y:220},
+        {name:'Entrepreneurial\nIntention',category:2,symbolSize:75,x:730,y:220}
+      ],
+      links:[
+        {source:0,target:3,value:0.348,name:'C→ESE',lineStyle:{color:PAL.accent}},
+        {source:1,target:3,value:0.159,name:'EE→ESE',lineStyle:{color:PAL.accent}},
+        {source:2,target:3,value:0.452,name:'EM→ESE',lineStyle:{color:PAL.accent,width:4}},
+        {source:3,target:4,value:0.309,name:'ESE→EI',lineStyle:{color:PAL.accent2,width:4}},
+        {source:0,target:4,value:0.063,name:'C→EI (direct, n.s.)',lineStyle:{color:PAL.muted,type:'dashed',curveness:0.35},
+          label:{color:PAL.muted,formatter:'B=0.063 (n.s.)'}},
+        {source:1,target:4,value:0.273,name:'EE→EI (direct)',lineStyle:{color:'#8b5cf6',curveness:0},
+          label:{color:'#7c3aed'}},
+        {source:2,target:4,value:0.307,name:'EM→EI (direct)',lineStyle:{color:PAL.rose,curveness:-0.3,width:3.5},
+          label:{color:PAL.rose}}
+      ]
+    }],
+    graphic:[
+      {type:'text',left:40,top:440,style:{text:'Indirect Effects (via ESE):  C = 0.108***   EE = 0.049*   EM = 0.140***',
+        fill:PAL.text,fontSize:12,fontWeight:700}},
+      {type:'text',left:40,top:462,style:{text:'Mediation Type:  C = Full   EE = Partial   EM = Partial   |   * p<.05, *** p<.001',
+        fill:PAL.muted,fontSize:11}}
+    ]
+  });
+});
+</script>
+</html>
